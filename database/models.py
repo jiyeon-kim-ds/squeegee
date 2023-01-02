@@ -51,4 +51,4 @@ class Article(Base, PrimaryKey):
     url         = Column(String(255), nullable=False)
     category_id = Column(Integer, ForeignKey('category.id', ondelete='CASCADE'))
     category    = relationship('Category', back_populates='articles')
-    is_read     = Column(bool, server_default=expression.false())
+    is_read     = Column(Boolean, server_default=expression.false())

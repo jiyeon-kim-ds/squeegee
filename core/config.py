@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 from pydantic import BaseSettings
 
 
+load_dotenv()
+
+
 class Settings(BaseSettings):
     mysql_server_name : str = os.environ.get('MYSQL_SERVER_NAME')
     mysql_username    : str = os.environ.get('MYSQL_USERNAME')
